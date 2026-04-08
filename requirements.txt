@@ -1,0 +1,4 @@
+typing_extensions
+uuid
+streamlit
+pandas
