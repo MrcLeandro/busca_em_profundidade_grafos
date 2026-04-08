@@ -16,3 +16,8 @@
 ## app.py : usa o Streamlit para criação de uma interface web para que o usuário insira a quantidade de membros da rede social e receba os resultados do cálculo do Grau de separação e tempo de execução
 
 ## Para rodar a aplicação no contêiner foi necessário iniciá-lo com mapeamento da porta padrão do Streamlit (8501) para acessar ao browser do host.
+## Comandos no terminal do VSCode: 
+    docker build -t nome_imagem .
+    docker run -p 8501:8501 nome_imagem
+## Para que o Streamlit aceite conexões externas (do seu navegador), ele deve "ouvir" em todos os endereços de rede do contêiner (0.0.0.0).
+    docker exec -it nome_conteiner streamlit run /app/app.py --server.address 0.0.0.0 0 
